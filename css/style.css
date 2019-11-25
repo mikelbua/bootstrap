@@ -1,0 +1,83 @@
+/* mi css*/
+
+main::before {
+    content: "Tipo de dispositivo : Small < 576px.";
+}
+
+h1 {
+color: teal;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    text-transform: capitalize;/*tranforma en mayusculas la primera letra de cada palabra*/
+}
+ul,ol {
+    list-style: none;
+}
+.col, .col-sm { 
+    border: 1px solid black;
+    background-color: #DDD;
+    padding: 20px;
+}
+
+.bordeprueba{
+    width: 100px;
+    height: 100px;
+}
+.spanborde {
+   width: 50px;
+   height: 50px;
+}
+.mifooter , .mifooter a, .mifooter p, .mifooter li{
+    color:white;
+}
+
+.mifooter li{
+    text-align: center;
+}
+
+.mifooter a:hover{
+    color:#ffc107;
+}
+
+.mifooter {
+    width: 100%;
+    height: 13%;
+    margin-top: 15px;
+    margin-bottom: 0!important;
+    border-radius: 0;
+    
+}
+.mifootercard {
+    padding: .5em;
+    background-color: teal;
+}
+/*Extra small devices (portrait phones, less than 576px)
+No media query for `xs` since this is the default in Bootstrap*/
+
+/*Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) { 
+    main::before{
+        content: "Tipo de dispositivo : Small devace 576px.";
+    }
+ }
+
+/*Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) { 
+    main::before{
+        content: "Tipo de dispositivo : Medium devices 768px.";
+    }
+ }
+
+/*Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) { 
+    main::before{
+        content: "Tipo de dispositivo : Large devices 992px.";
+    }
+ }
+/*Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) { 
+    main::before{
+        content: "Tipo de dispositivo : Extra large devices 1200px.";
+    }
+} 
