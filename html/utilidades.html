@@ -54,23 +54,63 @@
             <h3>boder simple</h3>
             <p>Esto es una div con borde "primary" si borde en la parte de arriba y con margen abajo (mb-2)</p>
             <div class="mb-2 bordeprueba border border-primary border-top-0 bg-warning"></div>
-            <h3>Border-radius</h3>
-            <span class="spanborde border rounded"></span>
-            <div>
-                <ul class="p-0 d-flex flex-column flex-sm-row justify-content-between">
-                    <li><span class="spanborde border rounded"></span></li>
-                    <li><span class="spanborde border rounded-top"></span></li>
-                    <li><span class="spanborde border rounded-right"></span></li>
-                    <li><span class="spanborde border rounded-bottom"></span></li>
-                    <li><span class="spanborde border rounded-left"></span></li>
-                    <li><span class="spanborde border rounded-circle"></span></li>
-                    <li><span class="spanborde border rounded-pill"></span></li>
-                    <li><span class="spanborde border rounded-0"></span></li>
-                </ul>
-            </di>
+            <h3>Border-radius , backgraun colors y flex</h3>
+            <p>Los siguientes <code>div</code> estaran ordenados con una clase <code>flex</code>, con diferentes clases para los <code>border-radius</code> y con los <code>background-color</code>> con colores predefinidos de bootstrap.</p>
+            <ol class="p-0 d-flex flex-column flex-sm-row justify-content-between">
+                    <li>
+                        <div class="caja rounded bg-primary"></div>
+                    </li>
+                    <li>
+                        <div class="caja rounded-top bg-secondary"></div>
+                    </li>
+                    <li>
+                        <div class="caja rounded-right bg-success"></div>
+                    </li>
+                    <li>
+                        <div class="caja rounded-bottom bg-danger"></div>
+                    </li>
+                    <li>
+                        <div class="caja rounded-left bg-warning"></div>
+                    </li>
+                    <li>
+                        <div class="caja rounded-circle bg-info"></div>
+                    </li>
+                    <li>
+                        <div class="caja rounded-pill" style="width: 150px;"></div>
+                    </li>
+                    <li>
+                        <div class="caja rounded-0 bg-dark" ></div>
+                    </li>
+                </ol>
             <h2>Embed</h2>
+            <p>A continuacion isertaremos un video de otra pagina en la nuestra propia.</p>
             <div class="embed-responsive embed-responsive-16by9">
                 <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen></iframe>
+            </div>
+            <br>
+            <h3>Display</h3>
+            <br>
+            <p>Estos dos <code>div</code>> tienen el atributo <code>Display: inline</code>> .</p>
+            <div class="d-inline p-2 bg-primary text-white">d-inline</div>
+            <div class="d-inline p-2 bg-dark text-white">d-inline</div>
+            <br><br>
+            <p>Los siguientes <code>span</code> son <code>Display: block</code> y desapareceran en pantallas <code>extra large</code>. Si tienes la pantalla completa encogela pra verlos.</p>
+            <span class="d-block p-2 bg-primary text-white d-none d-lg-block d-xl-none">d-block</span>
+            <br>
+            <span class="d-block p-2 bg-dark text-white d-none d-lg-block d-xl-none">d-block</span>
+            <br><br>
+            <h3>Stredchet link</h3>
+            <br>
+            <p>El siguiente <code>div</code> contiene una imagen un texto y un enlace pero al clicar en cualquiera de ellos accederas al la direccion del enlace anteriormente comentado.</p>
+            <div class="row no-gutters bg-light position-relative border">
+                <div class="col-md-6 mb-md-0 p-md-4">
+                    <img src="/images/bootstrapicon.png" class="w-100" alt="W3schools">
+                </div>
+                <div class="col-md-6 position-static p-4 pl-md-0">
+                    <h5 class="mt-0">Columna con <code>Stretched link</code></h5>
+                    <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+                    <a href="https://getbootstrap.com/docs/4.3/utilities/stretched-link/" class="stretched-link">Ejemplos <code>stretched-link</code></a>
+                </div>
             </div>
         </main>
         <div class=" mifooter card text-white bg-info mb-3">

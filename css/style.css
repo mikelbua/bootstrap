@@ -24,9 +24,11 @@ ul,ol {
     width: 100px;
     height: 100px;
 }
-.spanborde {
-   width: 50px;
-   height: 50px;
+.caja{
+    width: 75px;
+    height: 75px;
+    background-color: aqua;
+    border: 1px solid black;
 }
 .mifooter , .mifooter a, .mifooter p, .mifooter li{
     color:white;
