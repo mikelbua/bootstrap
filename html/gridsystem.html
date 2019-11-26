@@ -18,7 +18,9 @@
         <title>Hello, bootsatrp!Home page</title>
     </head>
     <body>
+        
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container">
                     <a class="navbar-brand" href="/index.html">HOME</a>
                     <button
                         class="navbar-toggler"
@@ -42,14 +44,22 @@
                                 <a class="nav-link" href="/html/utilidades.html">Utilidades</a>
                             </li>
                         </ul>
-                    </div>
-                </nav>
-        <main class="container">
-            <h1>Grid System</h1>
-            <h2>Grid system ejemplo</h2>
+                    </div><!--collspan-->
+                </div><!--.container-->
+            </nav>
             
+        <main class="container">
+            <div class="row mb-5">
+                <div class="col">
+                    <h1>Grid System</h1>
+                    <h2>Grid system ejemplo</h2>
+                    <p>Pootstrap funciona con un sistema de 12 grillas (columnas).</p>
+                    <p>Usa iternamente flex-box y es necesario que este dentro de un <code>.container</code></p>
+                </div>
+            </div>
+            <br>
             <p>Dividimos la filas en tres columnas para todos los breakpoints</p>
-            <div class="row">
+            <div class="row mb">
                 <div class="col">
                     One of three columns
                     <p></p>
@@ -61,27 +71,125 @@
                     One of three columns
                 </div>
             </div>
+            
             <p>Dividimos la fila en tres columnas a partir del small breakpoint</p>
-            <div class="row">
+            <div class="row p-2 mb-5">
                 <div class="col-sm">
-                    One of three columns
-                    <p></p>
+                    <span class="d-none d-sm-block">4</span>
+                    <span class="d-block d-sm-none">12</span>
                 </div>
                 <div class="col-sm">
-                    One of three columns
+                    <span class="d-none d-sm-block">4</span>
+                    <span class="d-block d-sm-none">12</span>
                 </div>
                 <div class="col">
-                    One of three columns
+                    <span class="d-none d-sm-block">4</span>
+                    <span class="d-block d-sm-none">12</span>
                 </div>
+            </div>
+
+            <p>Disponemos de 5 breakpoints y tambien se puede indicar las columnas que ocupan.</p>
+            <p>Las siguientes cajas ocuparan mas o menos columnas dependiendo del tamaño del dispositivo. 12 si es extra small 4 si es small y 6 si es large: <code>col-xs-12 col-sm-4 col-lg-6</code></p>
+
+            <div class="row mb-5">
+                <div class="col-xs-12 col-sm-4 col-lg-6">1ºcolumna</div>
+                <div class="col-xs-12 col-sm-4 col-lg-6">2ºcolumna</div>
+                <div class="col-xs-12 col-sm-4 col-lg-6">3ºcolumna</div>
+            </div>
+
+            <h2>Alineacion vertical</h2>
+            <p>Ponemos al div.row <code>min-height: 10rem;</code> para darle una altura minima.</p>
+                <div class="row mb-5 bg-warning" style="min-height: 10rem;">
+                  <div class="col align-self-start">
+                    One of three columns
+                  </div>
+                  <div class="col align-self-center">
+                    One of three columns
+                  </div>
+                  <div class="col align-self-end">
+                    One of three columns
+                  </div>
+                </div>
+            <h2>Alineacion Horizontal</h2>
+            <p>En este caso emos metido todas las filas en una contenedor (fondo amarillo) para que se vean mas claro.</p>
+            <div class="container bg-warning mb-5">
+                <div class="row justify-content-start">
+                  <div class="col-4">
+                    alinacion al inicio<code>.justify-content-start</code>
+                  </div>
+                  <div class="col-4">
+                    alinacion al inicio<code>.justify-content-start</code>
+                  </div>
+                </div>
+                <div class="row justify-content-center">
+                  <div class="col-4">
+                    alinacion al centrada<code>.justify-content-center</code>
+                  </div>
+                  <div class="col-4">
+                    alinacion al centrada<code>.justify-content-center</code>
+                  </div>
+                </div>
+                <div class="row justify-content-end">
+                  <div class="col-4">
+                    alinacion al final<code>.justify-content-end</code>
+                  </div>
+                  <div class="col-4">
+                    alinacion al final<code>.justify-content-end</code>
+                  </div>
+                </div>
+                <div class="row justify-content-around">
+                  <div class="col-4">
+                    alinacion centrada con espacion<code>.justify-content-around</code>
+                  </div>
+                  <div class="col-4">
+                    alinacion centrada con espacion<code>.justify-content-around</code>
+                  </div>
+                </div>
+                <div class="row justify-content-between">
+                  <div class="col-4">
+                    alineacion al esterior con espacios<code>.justify-content-between</code>
+                  </div>
+                  <div class="col-4">
+                    alineacion al esterior con espacios<code>.justify-content-between</code>
+                  </div>
+                </div>
+            </div>
+
+            <h2>Reordering</h2>
+            <h3>Order classes</h3>
+            <p>Tenemos 6 div en dos columnas para PC pero en movil queremos que la quinta sea la primera.</p>
+            <div class="row mb-5">
+                <div class="col-md-4 bg-success order-lg-5">5 importante</div>
+                <div class="col-md-4 order-md-1" >1</div>
+                <div class="col-md-4 order-md-2">2</div>
+                <div class="col-md-4 order-md-3">3</div>
+                <div class="col-md-4 order-md-4">4</div>
+                <div class="col-md-4  order-md-6">6</div>
+            </div>
+            <h3>offseting</h3>
+            <p>Queremos 3 columnas que ocupen tres espacios, pero de la segunda a la tercera debe quedar un hueco vacio.</p>
+            <p>El <code>.offset-md-4</code> se "comera" (hara desaparecer) el espacio de 4 columnas hacia la izquierda.
+            </p>
+            <div class="row mb-5 bg-warning">
+                <div class="col-md-4 small"><code>.col-md-4</code></div>
+                <div class="col-md-4 offset-md-4 small"><code>.col-md-4 .offset-md-4</code>(hueco)</div>
             </div>
         </main>
 
-        <div class=" mifooter card text-white bg-info mb-3">
+        <div class=" mifooter card text-white bg-info">
             <div class="card-body mifootercard">
               <h5 class="card-title">Footer</h5>
-              <p><a href="https://github.com/mikelbua/bootstrap"><i class="fab fa-github"></i> GitHub MikelBua</a> </p>
-            </div>
-        </div>
+              <div class="clearfix">
+                <ul class="p-0 d-flex flex-column flex-sm-row justify-content-between">
+                  <li><a href="https://getbootstrap.com/docs/4.3/utilities/flex/">Bootstrap Utilities flex</a></li>
+                  <li><a href="https://getbootstrap.com/docs/4.3/utilities/float/">Booptstrap Utilities Float</a></li>
+                  <li><a href="https://getbootstrap.com/">Bootstrap home</a></li>
+                  <li><a href="#">########</a></li>
+                  <li><a href="https://github.com/mikelbua/bootstrap" class="float-right"><i class="fab fa-github"></i> GitHub MikelBua</a></li>
+                </ul>
+              </div><!--clearfix-->
+            </div><!--card-body-->
+          </div><!--mifooter-->
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
         <script
