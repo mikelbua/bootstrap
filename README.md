@@ -7,4 +7,4 @@ Tenemos varia paginas .html donde probamos deferentes funcionalidades de este fr
 - Utilidades.
 - Temas.
 
-![Alt text]
+![Alt text](https://github.com/mikelbua/bootstrap/blob/master/CapturaReadme.PNG)
